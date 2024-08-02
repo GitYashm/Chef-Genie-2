@@ -13,7 +13,7 @@ const LocalStrategy = require('passport-local');
 const { log } = require('console');
 const userRoutes = require('./routers/user.js');
 const recipeRoutes = require('./routers/recipe.js');
-const port = 8082;
+const port = 8082 | process.env.PORT;
 
 if (process.env.NODE_ENV === 'production') {
     require('dotenv').config();
